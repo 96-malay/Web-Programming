@@ -1,0 +1,4 @@
+redirect or render? Which one to use for "/"? 
+page not found & user not found html pages?
+remove console.logs
+log all the requests

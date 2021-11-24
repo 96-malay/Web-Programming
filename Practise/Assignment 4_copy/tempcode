@@ -1,0 +1,198 @@
+/*     try{
+        let res = await restaurants.rename("61588210fe7d36187d74cebf","http://www.saffronlounge.com")
+        console.log(res)
+    }catch(e){
+        console.log(e)
+    }
+ */
+try{
+    let x = await restaurants.getAll()
+    console.log(x) 
+}catch(e){
+    console.log(e)
+}
+
+try{
+    let rest1 = await restaurants.create("The Red Lounge","New York City, New York","123-456-7890","http://www.saffronlounge.com",
+                                "$$$$",["Cuban", "Italian" ], 3, {dineIn: true, takeOut: true, delivery: false})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The White Lounge","Hoboken, New Jersey","897-456-7890","http://www.whitelounge.com",
+                                "$$$",["Cuban", "Indian" ], 4, {dineIn: true, takeOut: false, delivery: false})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let x = await restaurants.getAll()
+    data = x
+    console.log(x) 
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The Black Bird","Jersey city, New Jersey","897-098-7890","http://www.blackbird.com",
+                                "$$",["Maxican", "Indian" ], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    //let res = await restaurants.rename("61588210fe7d36187d74cebf","http://www.saffronlounge579.com")
+    let res = await restaurants.rename(data[0]['_id'],"http://www.saffronlounge579.com")
+    console.log(res)
+}catch(e){
+    console.log(e)
+}
+try{
+    //let res = await restaurants.remove('615b4bec64ed49d172a449ff')//Get 2nd ID
+    let res = await restaurants.remove(data[1]['_id'])//Get 2nd ID
+    console.log(res)
+}catch(e){
+    console.log(e)
+}
+try{
+    let x = await restaurants.getAll()
+    console.log(x) 
+}catch(e){
+    console.log(e)
+}
+
+// --------------------- Faulty records ---------------------  
+try{
+    let rest1 = await restaurants.create(null,"Jersey city, New Jersey","897-098-7890","http://www.blackbird.com",
+                                "$$",["Maxican", "Indian" ], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The Black Bird",123,"897-098-7890","http://www.blackbird",
+                                "$$",["Maxican", "Indian" ], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The Black Bird","Jersey city, New Jersey",897-098-7890,"http://www.blackbird",
+                                "$$",["Maxican", "Indian" ], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The Black Bird","Jersey city, New Jersey","(123)-345-6789","http://www.blackbird",
+                                "$$",["Maxican", "Indian" ], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The Black Bird","Jersey city, New Jersey","123-345-789","http://www.blackbird",
+                                "$$",["Maxican", "Indian" ], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The Black Bird","Jersey city, New Jersey","123-345-6789","http://www.blackbird.comhjh",
+                                "$$",["Maxican", "Indian" ], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The Black Bird","Jersey city, New Jersey","123-345-6789","www.blackbird.com",
+                                "$$",["Maxican", "Indian" ], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The Black Bird","Jersey city, New Jersey","123-345-6789","http://.com",
+                                "$$",["Maxican", "Indian" ], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The Black Bird","Jersey city, New Jersey","123-345-6789","http://.com",
+                                "",["Maxican", "Indian" ], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The Black Bird","Jersey city, New Jersey","123-345-6789","http://www.bla.com",
+                                "",["Maxican", "Indian" ], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The Black Bird","Jersey city, New Jersey","123-345-6789","http://www.black.com",
+                                "$$$",["Maxican", "Indian" ], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The Black Bird","Jersey city, New Jersey","123-345-6789","http://www.black.com",
+                                "$$",["Maxican", "Indian" ], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The Black Bird","Jersey city, New Jersey","123-345-6789","http://.com",
+                                "$$$$$",["Maxican", "Indian" ], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The Black Bird","Jersey city, New Jersey","123-345-6789","http://svrsvfs.com",
+                                "$$&$$",["Maxican", "Indian" ], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{
+    let rest1 = await restaurants.create("The Black Bird","Jersey city, New Jersey","123-345-6789","http://svrsvfs.com",
+                                "$$$$",[], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+try{//cuisine is wrong
+    let rest1 = await restaurants.create("The Black Bird","Jersey city, New Jersey","123-345-6789","http://svrsvfs.com",
+                                "$$$$",[1,5], 4.5, {dineIn: true, takeOut: false, delivery: true})
+console.log(rest1)
+}catch(e){
+    console.log(e)
+}
+//validate from ratings
+// --------------------- Faulty records ---------------------  
+try{
+    let res = await restaurants.get()
+}catch(e){
+    console.log(e)
+}
+try{
+    let res = await restaurants.remove()
+}catch(e){
+    console.log(e)
+}
+try{
+    let res = await restaurants.rename()
+}catch(e){
+    console.log(e)
+}
+try{
+
+}catch(e){
+    console.log(e)
+}

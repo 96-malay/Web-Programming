@@ -1,0 +1,36 @@
+<section>
+
+   {{#if showMainpg}}
+    <div>
+            <a href="/">Make another search</a>
+     </div>
+    {{/if}}
+      {{#unless hasError}}
+            <div>
+                <h1>{{charDataById.name}}</h1>
+            
+            {{!-- <img alt={{charDataById.name}} src="{{charDataById.thumbnail.path}}+{{charDataById.thumbnail.extension}}"> --}}
+            <img alt='' src={{charDataById.imageLink}}>
+            <p>{{{charDataById.description}}}</p>
+            <h2>Comics</h2>
+            <ul class="Characters">
+                {{#each charDataById.comics.items}}  
+                
+                 
+                    <li><h2>{{this.name}}</h2></li>
+                    {{!-- <p>{{body}}</p> --}}
+             
+                {{/each}}
+            </ul>
+            </div>
+      {{else}}
+            <p class="error">
+                {{errorMessage}}
+            </p>
+      {{/unless}} 
+           
+              
+        
+
+  
+</section>

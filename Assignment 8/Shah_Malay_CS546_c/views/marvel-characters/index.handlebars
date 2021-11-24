@@ -1,0 +1,32 @@
+<section>
+    
+   {{#if showMainpg}}
+    <div>
+            <a href="/">Make another search</a>
+     </div>
+    {{/if}}
+        
+        <h1>{{title}}</h1>
+        <h2>{{searchTerm}}</h2>
+        {{#unless hasError}}
+      <ul class="Characters">
+          {{#each characters}}  
+          
+           
+            <li><h2><a href="/characters/{{id}}">{{name}}</a></h2></li>
+            {{!-- <p>{{body}}</p> --}}
+           
+          {{/each}}
+      </ul>
+  
+        {{else }}
+            
+                <p class={{errorClass}}>{{errorMessage}}</p>
+            
+        {{/unless}}
+  
+
+  
+  
+
+</section>

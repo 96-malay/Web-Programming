@@ -1,0 +1,104 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-size: 14pt;
+}
+
+body {
+	background: #dedede;
+	font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+main {
+	max-width: 75%;
+	margin: auto;
+}
+
+header {
+	border-bottom: 1px solid #afafaf;
+}
+
+h1,
+h2,
+h3
+{
+	color: #222;
+	margin-bottom: 5px;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+
+p {
+	font-size: 1rem;
+	line-height: 2;
+}
+
+button {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+  }
+
+input{
+	width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: #228b22;
+  color: #dedede;
+  
+}
+label {
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	background-color: #228b22;
+	color: #dedede;
+}
+.not-found {
+	color: #ff0000;
+}
+.error {
+	color: darkred;
+}
+
+.Characters,
+.Characters:link {
+	color: #228b22;
+}
+
+.Characters:visited {
+	font-style: italic;
+	color: saddlebrown;
+}
+
+.Characters:hover {
+	font-style: normal;
+	font-weight: 700;
+}
+
+.Characters:active {
+	color: #ff0000;
+}
+

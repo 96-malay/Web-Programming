@@ -1,0 +1,5 @@
+remove special symbols from ipString
+logic to check palindrome
+HTML validation
+Add the names in the list
+CSS
